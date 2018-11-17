@@ -46,7 +46,7 @@ public class ContactService {
     public List<ContactEntity> getContacts() {
         return contactRepository.findAllContacts();
     }
-
+//ti jest komentarz
     public void deleteContact(int id) {
         if (userSession.isLogin()) {
             if (userSession.getUserEntity().getContacts()
