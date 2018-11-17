@@ -8,9 +8,15 @@
 
 <div style="text-align: center">
     <h1>Add number</h1>
+    <h3 th:text="${contactError}"></h3>
+    <h3 th:if="${isSurnameBusy != null}" style="color: crimson">Surname is busy!!!</h3>
     <form action="/contact/add" method="post" th:object="${contactForm}"><br>
+
+        <p th:if="${#fields.hasErrors('*')}" th:errors="*{name}"></p>
         <input type="text" th:field="*{name}" placeholder="name"> <br>
+        <p th:if="${#fields.hasErrors('*')}" th:errors="*{surname}"></p>
         <input type="text" th:field="*{surname}" placeholder="surname"> <br>
+        <p th:if="${#fields.hasErrors('*')}" th:errors="*{telNumber}"></p>
         <input type="text" th:field="*{telNumber}" placeholder="tel number"> <br> <br>
         <input type="submit" value="add number">
     </form>

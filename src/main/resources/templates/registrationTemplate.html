@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+</head>
+<body>
+<div style="text-align: center">
+<h3 th:text="${registerInfo}"></h3>
+    <form action="/user/register" method="post" th:object="${registerForm}">
+
+        <p th:if="${#fields.hasErrors('*')}" th:errors="*{login}"></p>
+        <input type="text" th:field="*{login}" placeholder="login"> <br>
+
+        <p th:if="${#fields.hasErrors('*')}"  th:errors="*{password}"></p>
+        <input type="password" th:field="*{password}" placeholder="password"> <br> <br>
+        <input type="submit" value="Register to PhoneBook">
+    </form>
+
+</div>
+</body>
+</html>
