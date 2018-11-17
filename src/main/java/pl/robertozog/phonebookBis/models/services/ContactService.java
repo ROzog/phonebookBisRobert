@@ -58,6 +58,9 @@ public class ContactService {
     }
 
 
+
+
+
     public List<ContactEntity> getContactsForLoginUser(){
         return contactRepository.findAllByUser_Id(userSession.getUserEntity().getId());
     }
