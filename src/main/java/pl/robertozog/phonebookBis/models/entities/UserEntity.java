@@ -1,6 +1,5 @@
 package pl.robertozog.phonebookBis.models.entities;
 
-
 import lombok.Data;
 
 import javax.persistence.*;

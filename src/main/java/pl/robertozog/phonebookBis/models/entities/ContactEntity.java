@@ -11,6 +11,8 @@ public class ContactEntity {
     @Id
     @GeneratedValue
     private int id;
+
+
     private String name;
     private String surname;
 

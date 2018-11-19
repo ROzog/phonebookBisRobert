@@ -20,5 +20,4 @@ public interface ContactRepository extends CrudRepository<ContactEntity,Integer 
     List<ContactEntity> findAllByUser_Id(int id);
 
     boolean existsBySurname(String surname);
-
 }
